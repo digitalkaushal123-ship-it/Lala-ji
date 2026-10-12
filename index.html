@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LALA JI 567 - India's No.1 Online Application</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter & Noto Sans Devanagari -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Poppins', 'Noto Sans Devanagari', 'sans-serif'],
+            hindi: ['Noto Sans Devanagari', 'Poppins', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              blue: '#274b9f',
+              btn: '#3062d4',
+              btnHover: '#1f4bb3',
+              amber: '#f28b0c',
+              gold: '#e69018',
+              crimson: '#dc2626',
+              borderGold: '#c59d45',
+            }
+          },
+          boxShadow: {
+            'card': '0 25px 60px -15px rgba(0, 0, 0, 0.18), 0 10px 25px -5px rgba(0, 0, 0, 0.08)',
+            'btn': '0 12px 28px -6px rgba(48, 98, 212, 0.55)',
+            'btn-active': '0 4px 12px rgba(48, 98, 212, 0.4)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background: radial-gradient(circle at 50% 20%, #e2e8f0 0%, #cbd5e1 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem 0.75rem;
+    }
+
+    @keyframes pulseSoft {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.025); }
+    }
+
+    .pulse-btn {
+      animation: pulseSoft 2.5s infinite ease-in-out;
+    }
+
+    .pulse-btn:hover {
+      animation: none;
+    }
+
+    .gold-shimmer {
+      background: linear-gradient(135deg, #184227 0%, #2e7d32 50%, #1b5e20 100%);
+    }
+  </style>
+</head>
+<body class="font-sans antialiased text-gray-800 selection:bg-brand-blue selection:text-white">
+
+  <main class="w-full max-w-[430px] mx-auto bg-white rounded-[38px] shadow-card px-6 sm:px-8 pt-9 pb-8 border border-white/80 transition-all duration-300">
+    
+    <!-- Header: Logo / Avatar Crest -->
+    <header class="flex flex-col items-center text-center">
+      <!-- Ornate Royal RJ Bazar Mascot Crest -->
+      <div class="relative w-28 h-28 mb-3 flex items-center justify-center">
+        <!-- Outer Glowing Golden Frame -->
+        <div class="absolute inset-0 rounded-full border-4 border-amber-400/80 shadow-md bg-gradient-to-b from-amber-100 to-amber-50"></div>
+        <div class="absolute inset-[3px] rounded-full border-2 border-dashed border-amber-600/60"></div>
+        
+        <!-- Royal Mascot SVG Illustration -->
+        <div class="relative w-[100px] h-[100px] rounded-full overflow-hidden flex items-center justify-center bg-gradient-to-b from-emerald-50 via-amber-50 to-emerald-100">
+          <svg viewBox="0 0 120 120" class="w-full h-full drop-shadow-sm" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Background Halo -->
+            <circle cx="60" cy="50" r="42" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5"/>
+            <path d="M60 12 L63 24 L75 25 L65 33 L69 45 L60 37 L51 45 L55 33 L45 25 L57 24 Z" fill="#FDE68A" opacity="0.6"/>
+
+            <!-- Torso / Royal Attire -->
+            <path d="M30 102 C30 78, 90 78, 90 102 Z" fill="#15803D" stroke="#14532D" stroke-width="2"/>
+            <path d="M45 78 L60 96 L75 78 Z" fill="#F8FAFC" stroke="#E2E8F0"/>
+            <path d="M57 78 L60 102 L63 78 Z" fill="#F59E0B"/>
+            <circle cx="60" cy="85" r="2.5" fill="#DC2626"/>
+            <circle cx="60" cy="92" r="2.5" fill="#DC2626"/>
+
+            <!-- Head & Face -->
+            <ellipse cx="60" cy="52" rx="17" ry="19" fill="#FCD34D"/>
+            <ellipse cx="60" cy="53" rx="16" ry="18" fill="#FDE68A"/>
+
+            <!-- Mustache & Beard -->
+            <path d="M49 58 Q60 62 71 58 Q60 68 49 58" fill="#1F2937"/>
+            <path d="M53 60 Q60 70 67 60 Q60 67 53 60" fill="#374151"/>
+            <path d="M44 56 C49 54, 53 58, 59 58 C65 58, 70 54, 76 56 C71 61, 65 62, 60 61 C55 62, 49 61, 44 56 Z" fill="#111827"/>
+
+            <!-- Eyes & Eyebrows -->
+            <ellipse cx="53" cy="48" rx="2.2" ry="2.2" fill="#111827"/>
+            <ellipse cx="67" cy="48" rx="2.2" ry="2.2" fill="#111827"/>
+            <path d="M49 44 Q53 41 57 44" stroke="#111827" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M63 44 Q67 41 71 44" stroke="#111827" stroke-width="1.8" stroke-linecap="round"/>
+            <circle cx="60" cy="45" r="2" fill="#DC2626"/> <!-- Tilak -->
+
+            <!-- Royal Turban (Pagri) -->
+            <path d="M37 42 C37 26, 83 26, 83 42 C83 47, 37 47, 37 42 Z" fill="#15803D"/>
+            <path d="M40 38 C45 23, 75 23, 80 38" fill="#16A34A"/>
+            <path d="M44 32 C50 20, 70 20, 76 32" fill="#22C55E"/>
+            <path d="M56 16 C60 12, 64 12, 64 26 C64 26, 56 26, 56 16 Z" fill="#F59E0B"/> <!-- Feather plume / kalgi -->
+            <ellipse cx="60" cy="27" rx="4" ry="4" fill="#DC2626" stroke="#FEF08A" stroke-width="1"/>
+
+            <!-- Hand holding gold coin / fortune -->
+            <g transform="translate(32, 62)">
+              <circle cx="7" cy="7" r="8" fill="#F59E0B" stroke="#B45309" stroke-width="1.5"/>
+              <text x="7" y="11" font-size="9" font-weight="bold" fill="#78350F" text-anchor="middle" font-family="sans-serif">₹</text>
+            </g>
+          </svg>
+        </div>
+
+        <!-- Banner with "LALA JI 567" -->
+        <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 min-w-[120px] px-2.5 py-0.5 rounded-md gold-shimmer border border-amber-300 shadow-md flex items-center justify-center">
+          <span class="text-[11px] font-black tracking-wider text-amber-200 drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)] font-sans whitespace-nowrap">
+            LALA JI 567
+          </span>
+        </div>
+      </div>
+
+      <!-- App Brand Title -->
+      <h1 class="text-[29px] leading-tight font-extrabold text-brand-blue tracking-normal mt-4">
+        LALA JI 567
+      </h1>
+
+      <!-- Downloads Counter Subtitle -->
+      <p class="text-[14px] font-semibold text-gray-500 tracking-wider mt-1">
+        --- <span id="downloadCount">487K</span>+ DOWNLOADS ---
+      </p>
+
+      <!-- Tagline -->
+      <p class="text-[16px] sm:text-[17px] font-semibold text-gray-700 mt-1">
+        India's <span class="text-brand-amber font-bold">No.1</span> Online <span class="text-brand-amber font-bold">Matka</span> Application
+      </p>
+    </header>
+
+    <section class="mt-7 px-1">
+      <!-- Section Title -->
+      <h2 class="text-xl sm:text-[22px] font-bold text-brand-gold font-hindi mb-4">
+        विशेषताएँ :-
+      </h2>
+
+      <!-- Features bullet list -->
+      <ul class="space-y-3.5 text-gray-900 font-hindi font-semibold text-[17px] sm:text-[18.5px] leading-snug">
+        <!-- Feature 1 -->
+        <li class="flex items-center gap-3">
+          <span class="text-2xl w-8 flex-shrink-0 text-center select-none" aria-hidden="true">📊</span>
+          <span>न्यूनतम जमा – <strong class="font-bold">₹50</strong></span>
+        </li>
+
+        <!-- Feature 2 -->
+        <li class="flex items-center gap-3">
+          <span class="text-2xl w-8 flex-shrink-0 text-center select-none" aria-hidden="true">🎯</span>
+          <span>न्यूनतम निकासी – <strong class="font-bold">₹480</strong></span>
+        </li>
+
+        <!-- Feature 3 -->
+        <li class="flex items-center gap-3">
+          <span class="text-2xl w-8 flex-shrink-0 text-center select-none" aria-hidden="true">💰</span>
+          <span>ऑटो निकासी <strong class="font-bold">24×7</strong> उपलब्ध</span>
+        </li>
+
+        <!-- Feature 4 -->
+        <li class="flex items-center gap-3">
+          <span class="text-2xl w-8 flex-shrink-0 text-center select-none" aria-hidden="true">🔒</span>
+          <span>सुरक्षित और तेज जमा / निकासी</span>
+        </li>
+
+        <!-- Feature 5 -->
+        <li class="flex items-center gap-3">
+          <span class="text-2xl w-8 flex-shrink-0 text-center select-none" aria-hidden="true">📞</span>
+          <span><strong class="font-bold">24×7</strong> ग्राहक सहायता उपलब्ध</span>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="mt-8 flex flex-col items-center text-center">
+      <!-- Download Button -->
+      <button 
+        id="downloadBtn"
+        type="button"
+        class="pulse-btn w-full max-w-[260px] py-3.5 px-6 bg-brand-btn hover:bg-brand-btnHover active:scale-95 text-white font-bold text-[18px] sm:text-[19px] rounded-full shadow-btn transition-all duration-200 cursor-pointer flex items-center justify-center gap-2"
+      >
+        <svg class="w-5 h-5 transition-transform duration-200 group-hover:translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+        </svg>
+        <span id="btnText">Download App</span>
+      </button>
+
+      <!-- 24x7 Customer Support banner -->
+      <p class="mt-5 text-[15px] sm:text-[16px] font-bold text-brand-crimson tracking-wide">
+        24×7 Customer Support
+      </p>
+
+      <!-- Limited-time bonus callout -->
+      <p class="mt-1 text-[14px] sm:text-[15px] font-bold text-brand-amber flex items-center justify-center gap-1.5 flex-wrap">
+        <span class="text-base select-none">⚡</span>
+        <span>Hurry! Limited-time bonus for new users</span>
+        <span class="text-base select-none">⚡</span>
+      </p>
+
+      <!-- Subtle bottom limits text -->
+      <p class="mt-3 text-[13px] sm:text-[14px] text-gray-500 font-medium tracking-tight">
+        Minimum Deposit ₹50 &bull; Minimum Withdrawal ₹480
+      </p>
+    </footer>
+  </main>
+
+  <!-- Interactive Toast Notification -->
+  <div 
+    id="toastBox"
+    class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-gray-900/95 text-white px-5 py-3 rounded-2xl shadow-xl border border-gray-700 text-sm flex items-center gap-3 transition-all duration-300 transform opacity-0 translate-y-6 pointer-events-none z-50"
+  >
+    <div class="w-6 h-6 rounded-full bg-emerald-500 flex items-center justify-center flex-shrink-0">
+      <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+      </svg>
+    </div>
+    <span id="toastMessage">एप्लिकेशन डाउनलोड शुरू हो रहा है...</span>
+  </div>
+
+  <script>
+    // Interaction script for Download button simulation
+    const downloadBtn = document.getElementById('downloadBtn');
+    const btnText = document.getElementById('btnText');
+    const toastBox = document.getElementById('toastBox');
+    const toastMessage = document.getElementById('toastMessage');
+
+    let isDownloading = false;
+
+    function showNotification(msg) {
+      toastMessage.textContent = msg;
+      toastBox.classList.remove('opacity-0', 'translate-y-6', 'pointer-events-none');
+      toastBox.classList.add('opacity-100', 'translate-y-0');
+
+      setTimeout(() => {
+        toastBox.classList.add('opacity-0', 'translate-y-6', 'pointer-events-none');
+        toastBox.classList.remove('opacity-100', 'translate-y-0');
+      }, 3500);
+    }
+
+    downloadBtn.addEventListener('click', () => {
+      if (isDownloading) return;
+      isDownloading = true;
+
+      // Update button visual state
+      btnText.textContent = "Downloading...";
+      downloadBtn.classList.remove('pulse-btn');
+
+      showNotification('APK डाउनलोड शुरू हो रहा है! (LALA JI 567 v4.2)');
+
+      setTimeout(() => {
+        btnText.textContent = "App Downloaded!";
+        downloadBtn.classList.add('bg-emerald-600');
+        showNotification('डाउनलोड पूरा हुआ! कृपया APK इनस्टॉल करें।');
+
+        setTimeout(() => {
+          btnText.textContent = "Download App";
+          downloadBtn.classList.remove('bg-emerald-600');
+          downloadBtn.classList.add('pulse-btn');
+          isDownloading = false;
+        }, 3000);
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
