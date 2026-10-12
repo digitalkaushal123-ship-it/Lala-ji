@@ -253,8 +253,8 @@
   </div>
 
   <script>
-    // Fetch the entire APK first, then offer it as a local download.
-    // Meta Pixel must be installed separately; Subscribe fires only after all APK bytes arrive.
+    // Fetch and validate the complete APK response before triggering the browser save.
+    // Subscribe fires only after the full response body has arrived and the save is initiated.
     const downloadBtn = document.getElementById('downloadBtn');
     const btnText = document.getElementById('btnText');
     const toastBox = document.getElementById('toastBox');
@@ -282,8 +282,14 @@
         const response = await fetch(APK_URL);
         if (!response.ok) throw new Error('APK download request failed (' + response.status + ')');
 
-        const apkBlob = await response.blob(); // resolves after the complete response body is received
+        const apkBlob = await response.blob(); // resolves only after the complete response body is received
         if (!apkBlob.size) throw new Error('Downloaded file is empty');
+
+        // If the server provides the expected size, reject an incomplete response.
+        const expectedSize = Number(response.headers.get('content-length'));
+        if (Number.isFinite(expectedSize) && expectedSize > 0 && apkBlob.size !== expectedSize) {
+          throw new Error('APK response was incomplete (expected ' + expectedSize + ' bytes, received ' + apkBlob.size + ' bytes)');
+        }
 
         const objectUrl = URL.createObjectURL(apkBlob);
         const link = document.createElement('a');
