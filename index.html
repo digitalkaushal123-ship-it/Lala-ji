@@ -235,19 +235,17 @@
   </div>
 
   <script>
-    // Interaction script for Download button simulation
+    // Start the real APK download when the user clicks the button.
     const downloadBtn = document.getElementById('downloadBtn');
     const btnText = document.getElementById('btnText');
     const toastBox = document.getElementById('toastBox');
     const toastMessage = document.getElementById('toastMessage');
-
-    let isDownloading = false;
+    const APK_URL = 'https://raw.githubusercontent.com/digitalkaushal123-ship-it/Lala-ji/main/lala567.apk';
 
     function showNotification(msg) {
       toastMessage.textContent = msg;
       toastBox.classList.remove('opacity-0', 'translate-y-6', 'pointer-events-none');
       toastBox.classList.add('opacity-100', 'translate-y-0');
-
       setTimeout(() => {
         toastBox.classList.add('opacity-0', 'translate-y-6', 'pointer-events-none');
         toastBox.classList.remove('opacity-100', 'translate-y-0');
@@ -255,27 +253,19 @@
     }
 
     downloadBtn.addEventListener('click', () => {
-      if (isDownloading) return;
-      isDownloading = true;
-
-      // Update button visual state
-      btnText.textContent = "Downloading...";
+      btnText.textContent = 'Starting Download...';
+      downloadBtn.disabled = true;
       downloadBtn.classList.remove('pulse-btn');
+      showNotification('APK डाउनलोड शुरू हो रहा है...');
 
-      showNotification('APK डाउनलोड शुरू हो रहा है! (LALA JI 567 v4.2)');
+      // Navigate directly to the actual APK file; do not simulate completion.
+      window.location.href = APK_URL;
 
       setTimeout(() => {
-        btnText.textContent = "App Downloaded!";
-        downloadBtn.classList.add('bg-emerald-600');
-        showNotification('डाउनलोड पूरा हुआ! कृपया APK इनस्टॉल करें।');
-
-        setTimeout(() => {
-          btnText.textContent = "Download App";
-          downloadBtn.classList.remove('bg-emerald-600');
-          downloadBtn.classList.add('pulse-btn');
-          isDownloading = false;
-        }, 3000);
-      }, 2000);
+        btnText.textContent = 'Download App';
+        downloadBtn.disabled = false;
+        downloadBtn.classList.add('pulse-btn');
+      }, 3000);
     });
   </script>
 </body>
