@@ -304,8 +304,8 @@
           window.fbq('track', 'Subscribe');
         }
 
-        btnText.textContent = 'Download Started';
-        showNotification('APK पूरा डाउनलोड हो गया है और सेव करने के लिए तैयार है।');
+        btnText.textContent = 'Download Complete';
+        showNotification('APK डाउनलोड तैयार है। Install करने के लिए Downloads में lala567.apk पर टैप करें।');
         setTimeout(() => URL.revokeObjectURL(objectUrl), 60000);
       } catch (error) {
         console.error('APK download failed:', error);
