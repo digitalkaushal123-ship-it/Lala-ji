@@ -21,13 +21,13 @@
           },
           colors: {
             brand: {
-              blue: '#274b9f',
-              btn: '#3062d4',
-              btnHover: '#1f4bb3',
-              amber: '#f28b0c',
-              gold: '#e69018',
-              crimson: '#dc2626',
-              borderGold: '#c59d45',
+              blue: '#D4AF37',
+              btn: '#D4AF37',
+              btnHover: '#B8860B',
+              amber: '#D4AF37',
+              gold: '#E5C15D',
+              crimson: '#E5C15D',
+              borderGold: '#8A6D1D',
             }
           },
           boxShadow: {
@@ -42,7 +42,7 @@
 
   <style>
     body {
-      background: radial-gradient(circle at 50% 20%, #e2e8f0 0%, #cbd5e1 100%);
+      background: radial-gradient(ellipse at top, #24211a 0%, #0b0b0b 48%, #030303 100%);
       min-height: 100vh;
       display: flex;
       align-items: center;
@@ -64,8 +64,40 @@
     }
 
     .gold-shimmer {
-      background: linear-gradient(135deg, #184227 0%, #2e7d32 50%, #1b5e20 100%);
+      background: linear-gradient(135deg, #6f5312 0%, #f5df91 48%, #8a6a19 100%);
     }
+
+    /* Luxury black & gold theme */
+    .luxury-card {
+      color: #f5f1e5;
+      background: linear-gradient(155deg, #1b1b1b 0%, #101010 52%, #080808 100%);
+      border: 1px solid rgba(212, 175, 55, .48);
+      box-shadow: 0 28px 80px rgba(0,0,0,.65), 0 0 0 1px rgba(212,175,55,.08), inset 0 1px 0 rgba(255,255,255,.04);
+    }
+    .luxury-card .text-gray-800,
+    .luxury-card .text-gray-900,
+    .luxury-card .text-gray-700 { color: #eee7d3; }
+    .luxury-card .text-gray-500 { color: #aaa18b; }
+    .luxury-card .border-white\/80 { border-color: rgba(212,175,55,.32); }
+    .luxury-card #downloadBtn {
+      color: #17130a;
+      background: linear-gradient(135deg, #f6df91 0%, #d4af37 48%, #a67c17 100%);
+      border: 1px solid #f7e6a7;
+      box-shadow: 0 10px 30px rgba(212,175,55,.22), inset 0 1px 0 rgba(255,255,255,.55);
+    }
+    .luxury-card #downloadBtn:hover {
+      background: linear-gradient(135deg, #ffe9a6 0%, #e0bd4f 48%, #bb901e 100%);
+    }
+    .luxury-card .rounded-full.border-4 {
+      border-color: #d4af37;
+      background: linear-gradient(145deg, #2a2517, #090909);
+      box-shadow: 0 0 24px rgba(212,175,55,.16);
+    }
+    .luxury-card .border-dashed { border-color: rgba(212,175,55,.55); }
+    .luxury-card .bg-gradient-to-b.from-emerald-50 {
+      background: linear-gradient(180deg, #242016, #0b0b0b);
+    }
+    .luxury-card .text-amber-200 { color: #17130a; }
   </style>
   <!-- Meta Pixel Code -->
   <script>
@@ -88,7 +120,7 @@
 </head>
 <body class="font-sans antialiased text-gray-800 selection:bg-brand-blue selection:text-white">
 
-  <main class="w-full max-w-[430px] mx-auto bg-white rounded-[38px] shadow-card px-6 sm:px-8 pt-9 pb-8 border border-white/80 transition-all duration-300">
+  <main class="luxury-card w-full max-w-[430px] mx-auto bg-white rounded-[38px] shadow-card px-6 sm:px-8 pt-9 pb-8 border border-white/80 transition-all duration-300">
     
     <!-- Header: Logo / Avatar Crest -->
     <header class="flex flex-col items-center text-center">
